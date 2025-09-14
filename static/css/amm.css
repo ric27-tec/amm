@@ -1,0 +1,82 @@
+body, html {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#wrapper {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.stragta-center {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-success {
+	color: #28a745;
+	font-weight: bold;
+	margin-top: 1em;
+	transition: all 0.3s ease;
+}
+
+.form-error {
+	color: #dc3545;
+	font-weight: bold;
+	margin-top: 1em;
+	transition: all 0.3s ease;
+}
+
+.form-success,
+.form-error {
+	text-align: center;
+	margin-top: 1em;
+}
+
+.stragta-two-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.stragta-two-columns h2 {
+  margin-top: 0;
+}
+
+.stragta-two-columns hr {
+  border: none;
+  border-top: 2px solid #ccc;
+  width: 60px;
+  margin: 1rem 0;
+}
+
+.lang-switch-footer {
+    font-size: 0.9em;
+    margin-top: 1em;
+    color: #bbb;
+    padding-bottom: 15px;
+}
+
+.lang-switch-footer a {
+    color: #ebebeb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.lang-switch-footer a:hover {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    #landing {
+        background-attachment: scroll !important;
+        background-position: top center !important;
+    }
+
+
+}
