@@ -1,26 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Home -->
   <url>
-    <loc>https://andesmultimedia.com/</loc>
-    <lastmod>2025-09-09</lastmod>
+    <loc>https://www.andesmultimedia.com/</loc>
+    <lastmod>2025-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- EN Home -->
   <url>
-    <loc>https://andesmultimedia.com/en/</loc>
-    <lastmod>2025-09-09</lastmod>
+    <loc>https://www.andesmultimedia.com/en/</loc>
+    <lastmod>2025-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Secciones ES -->
+  <url>
+    <loc>https://www.andesmultimedia.com/proyectos/</loc>
+    <lastmod>2025-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.andesmultimedia.com/streaming/</loc>
+    <lastmod>2025-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://andesmultimedia.com/proyectos/</loc>
-    <lastmod>2025-09-09</lastmod>
+    <loc>https://www.andesmultimedia.com/webshow/</loc>
+    <lastmod>2025-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://andesmultimedia.com/en/projects/</loc>
-    <lastmod>2025-09-09</lastmod>
+    <loc>https://www.andesmultimedia.com/contacto/</loc>
+    <lastmod>2025-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Secciones EN -->
+  <url>
+    <loc>https://www.andesmultimedia.com/en/projects/</loc>
+    <lastmod>2025-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.andesmultimedia.com/en/streaming/</loc>
+    <lastmod>2025-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.andesmultimedia.com/en/webshows/</loc>
+    <lastmod>2025-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
