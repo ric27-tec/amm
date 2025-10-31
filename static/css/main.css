@@ -4447,3 +4447,47 @@ MOBILE FIXES DE BASE
 }
 
 }
+
+/* === TIMELINE === */
+.timeline-block ul,
+.timeline-block li {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.timeline-block li::before,
+.timeline-block li::marker {
+  content: none !important;
+  display: none !important;
+}
+.timeline-block li {
+  margin: 1.1rem 0 1.4rem !important;
+}
+
+/* Año */
+.timeline-block h4 {
+  margin: 0 0 .4rem;
+  font-weight: 800;
+  font-size: 1.4rem;
+  line-height: 1;
+  letter-spacing: .02em;
+  color: #eaf2ff;
+  display: inline-block;
+  padding: .15rem .6rem;
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(23, 23, 23, 0.18), rgba(83,166,255,.06));
+  border: 1px solid rgba(91, 91, 91, 0.35);
+}
+
+/* Texto */
+.timeline-block p {
+  margin: 0;
+  color: #ffffff;
+  line-height: 1.55;
+}
+
+		/* Banner sin oscurecimiento */
+	#banner.clear::after {
+	background: none !important;
+	content: none !important;
+}
