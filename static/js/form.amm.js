@@ -1,33 +1,65 @@
-document.addEventListener("DOMContentLoaded", function () {
-	const form = document.getElementById("contact-form");
-	const statusDiv = document.getElementById("form-status");
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form");
+  const statusDiv = document.getElementById("form-status");
+  const tsField = document.getElementById("ts");
 
-	form.addEventListener("submit", async function (e) {
-		e.preventDefault();
-		const formData = new FormData(form);
+  if (!form) {
+    return;
+  }
 
-		if (formData.get("website")) return;
+  if (tsField) {
+    tsField.value = String(Date.now());
+  }
 
-		try {
-			await fetch("https://script.google.com/macros/s/AKfycbxXTxY7moPiNTC-YUcaAFKR1EA_YR-kvkH5BLsUiWauCAmIbR9askfxErDkj5bKncU/exec", {
-				method: "POST",
-				mode: "no-cors",
-				body: formData
-			});
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-			form.reset();
-			statusDiv.className = "form-success";
-			statusDiv.textContent = "✔️ Mensaje enviado con éxito.";
+    const formData = new FormData(form);
 
-			setTimeout(() => {
-				statusDiv.textContent = "";
-				statusDiv.className = "";
-			}, 4000);
+    // Honeypot: if filled, silently stop
+    const company = (formData.get("company") || "").toString().trim();
+    if (company !== "") {
+      return;
+    }
 
-		} catch (err) {
-			console.error(err);
-			statusDiv.className = "form-error";
-			statusDiv.textContent = "Ha ocurrido un error. Por favor, inténtalo de nuevo.";
-		}
-	});
+    // Ensure timestamp is present and recent
+    if (!formData.get("ts")) {
+      formData.set("ts", String(Date.now()));
+    }
+
+    try {
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbxXTxY7moPiNTC-YUcaAFKR1EA_YR-kvkH5BLsUiWauCAmIbR9askfxErDkj5bKncU/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          body: formData,
+        }
+      );
+
+      form.reset();
+
+      // Reset ts after reset
+      if (tsField) {
+        tsField.value = String(Date.now());
+      }
+
+      if (statusDiv) {
+        statusDiv.className = "form-success";
+        statusDiv.textContent = "Message sent successfully.";
+
+        setTimeout(() => {
+          statusDiv.textContent = "";
+          statusDiv.className = "";
+        }, 4000);
+      }
+    } catch (err) {
+      console.error(err);
+
+      if (statusDiv) {
+        statusDiv.className = "form-error";
+        statusDiv.textContent = "An error occurred. Please try again.";
+      }
+    }
+  });
 });
