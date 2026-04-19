@@ -1322,7 +1322,7 @@ input, select, textarea {
 				}
 
 				.row > .col-6-small {
-					width: 50%;
+					width: 30%;
 				}
 
 				.row > .off-6-small {
@@ -4054,10 +4054,10 @@ input, select, textarea {
   margin: .35rem 0;
   line-height: 1.55;
   font-size: clamp(.92rem, 1.1vw, .98rem);
-  color: rgba(255,255,255,.95);
+  color: rgba(179, 179, 179, 0.95);
 }
 .project-bullets li::before{
-  content: "✓";
+  content: "+";
   position: absolute;
   left: -1.25rem;
   top: 0;
@@ -4305,7 +4305,7 @@ input, select, textarea {
   object-fit: cover;
 }
 
-.stragta-center {
+.amm-center {
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
